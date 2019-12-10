@@ -11,6 +11,13 @@
     <title>主页</title>
   </head>
   <body>
-  欢迎登陆
+  <center>
+    <h4>欢迎登陆</h4>
+    <form action="findusers" method="get">
+      姓名：<input type="text" name="userName">
+      性别：<input type="text " name="userSex">
+      <button type="submit">查询</button>
+    </form>
+  </center>
   </body>
 </html>
