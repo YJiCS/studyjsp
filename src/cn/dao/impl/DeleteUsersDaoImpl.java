@@ -14,7 +14,7 @@ public class DeleteUsersDaoImpl implements DeleteUsersDao {
         PreparedStatement pstmt=null;
         boolean isFlag=false;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/web_study?serverTimezone=UTC","root","123456");
             String sql ="delete from users where userno=?";
             pstmt.setInt(1, userNo);

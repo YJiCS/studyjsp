@@ -14,7 +14,7 @@ public class LoginDaoImpl implements LoginDao {
         PreparedStatement pstmt=null;
         ResultSet rs=null;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/web_study?serverTimezone=UTC","root","123456");
             String sql="select * from users where userNo=? and userPwd=?";
             pstmt=conn.prepareStatement(sql);

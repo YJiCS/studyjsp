@@ -15,7 +15,7 @@ public class RegisterDaoimpl implements RegisterDao {
         PreparedStatement pstmt=null;
         boolean isFlag=false;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/web_study?serverTimezone=UTC","root","123456");
             String sql="insert into users(userNo,userName,userPwd,userSex,userAddress) values(?,?,?,?,?)";
             pstmt=conn.prepareStatement(sql);

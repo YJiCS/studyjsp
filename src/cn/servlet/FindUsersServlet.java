@@ -3,6 +3,7 @@ package cn.servlet;
 import cn.pojo.Users;
 import cn.services.FindUsersService;
 import cn.services.impl.FindUsersServiceImpl;
+import sun.misc.Request;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -19,6 +20,8 @@ public class FindUsersServlet  extends HttpServlet {
         int userSex=Integer.parseInt(req.getParameter("userSex"));
         FindUsersService findUsersService =new FindUsersServiceImpl();
         List<Users> ls= findUsersService.findUsersService();
+        req.setAttribute("list", ls);
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
         for(Users users: ls){
             System.out.print(users.getUserNo()+"--");
             System.out.print(users.getUserName()+"--");
