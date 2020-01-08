@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface FindUsersDao {
     List<Users> findUsersDao();
+    Users findUserNo(String userNo);
 }

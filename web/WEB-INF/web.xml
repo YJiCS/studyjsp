@@ -23,6 +23,14 @@
         <servlet-name>DeleteUsersServlet</servlet-name>
         <servlet-class>cn.servlet.DeleteUsersServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AjaxServlet</servlet-name>
+        <servlet-class>cn.servlet.AjaxServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FindUserNo</servlet-name>
+        <servlet-class>cn.servlet.FindUserNoServlet</servlet-class>
+    </servlet>
 
 
     <servlet-mapping>
@@ -40,5 +48,13 @@
     <servlet-mapping>
         <servlet-name>DeleteUsersServlet</servlet-name>
         <url-pattern>/deleteusers</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AjaxServlet</servlet-name>
+        <url-pattern>/ajax</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FindUserNo</servlet-name>
+        <url-pattern>/findUserNo</url-pattern>
     </servlet-mapping>
 </web-app>

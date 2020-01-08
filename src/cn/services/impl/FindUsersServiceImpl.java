@@ -13,4 +13,9 @@ public class FindUsersServiceImpl implements FindUsersService {
     public List<Users> findUsersService() {
         return findUsersDao.findUsersDao();
     }
+
+    @Override
+    public Users findUserNo(String userNo) {
+        return findUsersDao.findUserNo(userNo);
+    }
 }
